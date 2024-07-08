@@ -1,0 +1,15 @@
+../Core/Src/scd30.c:40:10:sensirion_bytes_to_uint32_t	1
+../Core/Src/scd30.c:45:7:sensirion_bytes_to_float	1
+../Core/Src/scd30.c:55:9:sensirion_common_generate_crc	4
+../Core/Src/scd30.c:73:8:sensirion_common_check_crc	2
+../Core/Src/scd30.c:80:9:sensirion_i2c_general_call_reset	1
+../Core/Src/scd30.c:85:10:sensirion_fill_cmd_send_buf	2
+../Core/Src/scd30.c:105:9:sensirion_i2c_read_words_as_bytes	4
+../Core/Src/scd30.c:132:9:sensirion_i2c_read_words	3
+../Core/Src/scd30.c:151:9:sensirion_i2c_write_cmd	1
+../Core/Src/scd30.c:158:9:sensirion_i2c_write_cmd_with_args	1
+../Core/Src/scd30.c:168:9:sensirion_i2c_delayed_read_cmd	3
+../Core/Src/scd30.c:185:9:sensirion_i2c_read_cmd	1
+../Core/Src/scd30.c:191:8:sensirion_i2c_write	1
+../Core/Src/scd30.c:197:8:sensirion_i2c_read	1
+../Core/Src/scd30.c:202:6:sensirion_sleep_usec	3
