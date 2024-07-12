@@ -1,0 +1,89 @@
+{
+    "algorithm_type": "outlier",
+    "commit": "cbfa945e",
+    "compilation_date": "2024-07-11T08:30:12.936796",
+    "compilation_flags": {
+        "float_abi": "hard",
+        "fshort_enums": true,
+        "short_wchar": false
+    },
+    "compilation_str": "{'compilation_dict':{'request_type':'library','api':{'env':'PROD','version':'v3'},'version':{'web_api':{'env':'PROD','version':'v3'},'local_api':{'version':'2024.06.20.0','platform':'win64'},'studio':'4.5.0'},'compilation_flags':{'float_abi':'hard','short_wchar':false,'fshort_enums':true,'use_knowledge':false},'mcu':'cortex-m4_st_stm32h7_stm32h745i-disco','sensor':'multiGeneric','request_origin':'manual','algorithm_type':'outlier','lib_version':'v2_cbfa945','info':{'progression':{'evals_done':200000,'optimization_progress':1.0,'elapsed_time':739,'cpu_info':{'cpu_nb_cores':8,'cpu_nb_cores_for_optimization':6},'state':'finished'},'max_ram':1024000,'max_flash':2048000,'optimization_global_id':'6d56b90a5b233ca63843bcb4e922e469'},'class_names':'nominal','results':[{'result_id':7,'combination':[0,[],0,0,14,32,0,0,1,0,0.0,0.0,1000000.0,1,0,0,0,0,0],'performance':{'performance':{'score':0.8812,'precision':0.9,'precision_confidence_interval':[0.7132,1.0]},'memory_usage':{'estimated_ram':309,'estimated_flash':404,'estimated_flash_knowledge':null}},'learning_min_lines':null}],'data':{'nb_cols':32,'nb_lines':[[{'file_type':'nominal','nb_lines':49}]]},'only_emulators':false,'lock_type':100},'sign':42829,'license_key':'***'}",
+    "compile_emulators": true,
+    "compile_library": true,
+    "data": {
+        "nb_cols": 32,
+        "nb_lines": [
+            [
+                {
+                    "file_type": "nominal",
+                    "nb_lines": 49
+                }
+            ]
+        ]
+    },
+    "gcc_version": "arm-none-eabi-gcc (Arm GNU Toolchain 13.2.rel1 (Build arm-13.7)) 13.2.1 20231009",
+    "learning_min_lines": null,
+    "lib_limited": false,
+    "library_id": "668f98150c8728bdf78b3c4f",
+    "library_md5sum": "1d949ec8fc24b2de66acf32b43a9a947",
+    "mcu": "cortex-m4_st_stm32h7_stm32h745i-disco",
+    "mcu_cpn": "STM32H745I-DISCO",
+    "mcu_display_name": "STM32H745I-DISCO - STMicroelectronics",
+    "mcu_family": "STM32H7 Series",
+    "mcu_group": "demo",
+    "mcu_type": "cortex-m4",
+    "mcu_vendor": "STMicroelectronics",
+    "memory_usage": {
+        "flash": 1069,
+        "ram": 189
+    },
+    "optimization_info": {
+        "max_flash": 2048000,
+        "max_ram": 1024000,
+        "optimization_global_id": "6d56b90a5b233ca63843bcb4e922e469",
+        "progression": {
+            "cpu_info": {
+                "cpu_nb_cores": 8,
+                "cpu_nb_cores_for_optimization": 6
+            },
+            "elapsed_time": 739,
+            "evals_done": 200000,
+            "optimization_progress": 1.0,
+            "state": "finished"
+        }
+    },
+    "performance": {
+        "memory_usage": {
+            "estimated_flash": 404,
+            "estimated_flash_knowledge": null,
+            "estimated_ram": 309
+        },
+        "performance": {
+            "precision": 0.9,
+            "precision_confidence_interval": [
+                0.7132,
+                1.0
+            ],
+            "score": 0.8812
+        }
+    },
+    "request_type": "library",
+    "sensor": "multiGeneric",
+    "studio_info": {
+        "local_api": {
+            "platform": "win64",
+            "version": "2024.06.20.0"
+        },
+        "studio": "4.5.0",
+        "web_api": {
+            "env": "PROD",
+            "version": "v3"
+        }
+    },
+    "user_info": {
+        "company": "Epfl",
+        "email": "ismail.essaidi@epfl.ch",
+        "first_name": "Ismail",
+        "last_name": "Essaidi"
+    }
+}
