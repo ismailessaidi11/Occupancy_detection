@@ -83,7 +83,7 @@ This project implements an AI-powered room monitoring system on an STM32 microco
 
 ## STM32CubeMX config 
 
-![[STM32CubeMX Configuration](https://drive.google.com/file/d/12Bl72VA6uWHN2KIGfx5inIY_E3nJZ-6Y/view?usp=drive_link)
+![[STM32CubeMX Configuration](https://drive.google.com/file/d/12Bl72VA6uWHN2KIGfx5inIY_E3nJZ-6Y/view?usp=drive_link)]
 
 ## License
 
