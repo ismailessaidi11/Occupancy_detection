@@ -1,6 +1,6 @@
 # STM32 AI-Powered Room Monitoring System
 
-This project implements an AI-powered room monitoring system on an STM32 microcontroller. The system uses sensors to measure various environmental parameters and predicts the occupancy status of a room. The system leverages a neural network model to make predictions based on sensor data.
+This project implements an AI-powered room monitoring system on an STM32 microcontroller. The system uses a sensor to measure various environmental parameters and predicts the occupancy status of a room. The system leverages a neural network model to make predictions based on sensor data.
 
 ## Table of Contents
 
@@ -19,19 +19,18 @@ This project implements an AI-powered room monitoring system on an STM32 microco
 - SCD30 CO2 sensor (or similar, for measuring CO2 concentration, temperature, and humidity)
 - I2C interface for communication with the sensor
 - UART interface for debugging and data output
-- LED for status indication
 
 ## Software Requirements
 
 - STM32CubeMX for hardware configuration and code generation
+- X-CubeAI v9.0.0 software package installed in STM32CubeMX for Neural Network to C code conversion
 - STM32CubeIDE or an equivalent IDE for developing and flashing the firmware
-- HAL (Hardware Abstraction Layer) library for STM32
-- AI model files (`network.h` and `network_data.h`) for the neural network
+- HAL (Hardware Abstraction Layer) driver for STM32
 
 ## Project Structure
 
-- `main.c`: The main source file containing the initialization and main loop.
-- `network.h`, `network_data.h`: Files related to the AI model, generated from a tool like STM32Cube.AI.
+- `main.c`: The main source file containing the initialization and main sensing and predicting loop.
+- `network.h`, `network_data.h`: Files related to the AI model, generated from STM32Cube.AI.
 - `sensor.h`, `sensor.c`: Functions for interfacing with the SCD30 sensor.
 - `ai_utils.c`, `ai_utils.h`: Utility functions for AI model inference.
 - `stm32f4xx_hal_conf.h`, `system_stm32f4xx.c`: HAL configuration and system files.
@@ -77,6 +76,14 @@ This project implements an AI-powered room monitoring system on an STM32 microco
 - **Sensor Probing Failed:** Ensure the SCD30 sensor is properly connected and powered.
 - **UART Communication Issues:** Verify the UART settings and connections.
 - **Model Inference Errors:** Check the AI model files and ensure they are correctly integrated.
+- 
+## Authors
+
+- [@ismailessaidi11](https://www.github.com/ismailessaidi11)
+
+## STM32CubeMX config 
+
+![[STM32CubeMX Configuration](https://drive.google.com/file/d/12Bl72VA6uWHN2KIGfx5inIY_E3nJZ-6Y/view?usp=drive_link)
 
 ## License
 
