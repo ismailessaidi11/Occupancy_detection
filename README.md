@@ -84,7 +84,12 @@ This project implements an AI-powered room monitoring system on an STM32 microco
 ## STM32CubeMX config 
 
 ![I2C parameters](./MX_config/I2C_parameters.png)
+<p style="text-align: center;">I2C parameter settings</p>
 
+## Results
+CM7: 
+- @400MHz inference time: 50us
+- @100MHz inference time: 194us
 ## License
 
 This project is licensed under the terms provided in the LICENSE file, located in the root directory of this project. If no LICENSE file is present, the software is provided AS-IS, with no warranties or guarantees.
