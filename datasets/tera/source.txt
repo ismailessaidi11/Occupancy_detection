@@ -1,0 +1,3 @@
+The data of this dataset were collected for 7 days in an office of 10m2. 
+This data is the one used to train our models to predict occupancy in this office. 
+The purpose behind adding features about the space measured is to generalize to any other room/closed environnment.

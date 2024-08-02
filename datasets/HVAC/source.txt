@@ -1,0 +1,18 @@
+This dataset was taken from this study:
+https://www.kaggle.com/code/turksoyomer/hvac-occupancy-detection-with-ml-and-dl-methods/input
+
+New features were added: 
+-average_co2_last_hour
+-average_temperature_last_hour
+-average_humidity_last_hour
+-current_value_minus_average_last_hour_co2
+-current_value_minus_average_last_hour_temperature
+-current_value_minus_average_last_hour_humidity
+-current_value_minus_last_15_min_co2
+-current_value_minus_last_15_min_temperature
+-current_value_minus_last_15_min_humidity
+-room_number
+-hour_of_the_day
+-day_number_of_the_week
+-day_of_year
+-floor_area
