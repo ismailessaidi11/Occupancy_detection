@@ -85,6 +85,7 @@ uint8_t RxBuffer[4];
 static ai_handle network = AI_HANDLE_NULL;
 
 
+
 /* Global c-array to handle the activations buffer */
 AI_ALIGNED(32)
 static ai_u8 activations[AI_NETWORK_DATA_ACTIVATIONS_SIZE];
