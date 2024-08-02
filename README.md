@@ -1,6 +1,6 @@
 # STM32 AI-Powered Room Monitoring System
 
-This project implements an AI-powered room monitoring system on an STM32 microcontroller. The system uses a sensor to measure various environmental parameters and predicts the occupancy status of a room. The system leverages a neural network model to make predictions based on sensor data.
+This project implements an AI-powered room monitoring system on an STM32 microcontroller. The system uses sensors to measure various environmental parameters and predicts the occupancy status of a room. The system leverages a neural network model to make predictions based on sensor data.
 
 ## Table of Contents
 
@@ -15,25 +15,24 @@ This project implements an AI-powered room monitoring system on an STM32 microco
 
 ## Hardware Requirements
 
-- STM32 microcontroller (specific model not mentioned, but the project assumes support for I2C and UART peripherals)
+- STM32 microcontroller (support for I2C, UART peripherals and X-cubeAI software pack)
 - SCD30 CO2 sensor (or similar, for measuring CO2 concentration, temperature, and humidity)
 - I2C interface for communication with the sensor
 - UART interface for debugging and data output
+- LED for status indication
 
 ## Software Requirements
 
 - STM32CubeMX for hardware configuration and code generation
-- X-CubeAI v9.0.0 software package installed in STM32CubeMX for Neural Network to C code conversion
 - STM32CubeIDE or an equivalent IDE for developing and flashing the firmware
-- HAL (Hardware Abstraction Layer) driver for STM32
+- HAL (Hardware Abstraction Layer) library for STM32
+- X-CubeAI for converting the trained model (.h5 file) into a C code
 
 ## Project Structure
 
-- `main.c`: The main source file containing the initialization and main sensing and predicting loop.
-- `network.h`, `network_data.h`: Files related to the AI model, generated from STM32Cube.AI.
-- `sensor.h`, `sensor.c`: Functions for interfacing with the SCD30 sensor.
-- `ai_utils.c`, `ai_utils.h`: Utility functions for AI model inference.
-- `stm32f4xx_hal_conf.h`, `system_stm32f4xx.c`: HAL configuration and system files.
+- `main.c`: The main source file containing the initialization and main loop.
+-  AI_SRC containing `network.c`, `network_data.c`, `network_data_params.c` : Files related to the AI model, generated from STM32Cube.AI.
+-  sensor_SRC containg `scd30.c`, `scd30_utils.c`: Functions for interfacing with the SCD30 sensor.
 - `README.md`: This documentation file.
 
 ## Setup
@@ -43,13 +42,18 @@ This project implements an AI-powered room monitoring system on an STM32 microco
    - Connect the UART TX pin to a serial-to-USB converter for debugging.
 
 2. **Software Setup:**
-   - Open the project in STM32CubeMX and configure the peripherals (I2C, UART, GPIO).
+   - Open the project in STM32CubeMX and configure the peripherals (I2C, UART, GPIO, RTC).
+   - Open X-CubeAI in STM32CubeMX and add the AI model files (.h5 format for example).
    - Generate the code and open it in STM32CubeIDE.
-   - Add the AI model files (`network.h` and `network_data.h`) to the project.
 
 3. **Building and Flashing:**
    - Build the project in STM32CubeIDE.
    - Flash the firmware onto the STM32 microcontroller.
+
+## STM32CubeMX configuration
+
+![I2C parameters](./MX_config/I2C_parameters.png)
+<p style="text-align: center;">I2C parameter settings</p>
 
 ## Usage
 
@@ -58,7 +62,7 @@ This project implements an AI-powered room monitoring system on an STM32 microco
    - The system will probe the SCD30 sensor. If successful, it will start periodic measurements.
 
 2. **Data Collection:**
-   - The system measures CO2 concentration, temperature, and humidity at regular intervals.
+   - The system measures CO2 concentration, temperature, and humidity at regular intervals (defined by user).
    - The data is processed and fed into the AI model to predict room occupancy.
 
 3. **Output:**
@@ -69,27 +73,14 @@ This project implements an AI-powered room monitoring system on an STM32 microco
 
 - **Sensor Data Simulation:** Uncomment the `FAKE_DATA` definition to use simulated data for testing.
 - **Time Features:** Uncomment the `TIME_FEATURES` definition to include time-related features in the AI model input.
-- **Decision Boundary:** Modify the `decision_boundary` variable in `main.c` to change the threshold for occupancy prediction.
+- **Acceleration Features:**  Uncomment the  `ACCELERATION_FEATURES` definition to include acceleration features in the AI model input.
 
 ## Troubleshooting
 
 - **Sensor Probing Failed:** Ensure the SCD30 sensor is properly connected and powered.
 - **UART Communication Issues:** Verify the UART settings and connections.
 - **Model Inference Errors:** Check the AI model files and ensure they are correctly integrated.
-- 
-## Authors
 
-- [@ismailessaidi11](https://www.github.com/ismailessaidi11)
-
-## STM32CubeMX config 
-
-![I2C parameters](./MX_config/I2C_parameters.png)
-<p style="text-align: center;">I2C parameter settings</p>
-
-## Results
-CM7: 
-- @400MHz inference time: 50us
-- @100MHz inference time: 194us
 ## License
 
 This project is licensed under the terms provided in the LICENSE file, located in the root directory of this project. If no LICENSE file is present, the software is provided AS-IS, with no warranties or guarantees.
